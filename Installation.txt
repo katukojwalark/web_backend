@@ -1,0 +1,8 @@
+
+React JS
+
+Install Node JS from: https://nodejs.org/en/download/
+
+at git bash from the folder where you want to have your nodejs repository run the following command,
+ 
+ npx create-react-app firstapp
