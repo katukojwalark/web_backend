@@ -67,3 +67,48 @@ function onUserLogin() {
 let loginUser = (usr) => usr==invalidUser ? alert("Invalid Credentials"): alert("Welcome " + usr.userName + '!');
 
 let authLogin = (usr) => loginUser(usr)
+
+/**********  Rest parameters - arguments object  **********/
+// Ex:
+function fooArgs(a, b) {console.log("a, b: ", a ,b)}
+console.log("fooArgs(a, b)");
+
+fooArgs(1,2,3,4,5); // Notice that though fooArgs(a, b) has only 2 args this call will still succeed.
+
+function fooArguments(a, b) {
+    console.log("arguments object: ", arguments);
+    console.log("arguments.length: ", arguments.length);
+}
+
+fooArguments(1,2,3,4,5);
+
+// Q: How do you differentiate between the arguments that are caught and that are not caught by the function?
+// A: ... Ellipses restparamsArray.
+// In the following Notice that 'restParams' can be any name of your choice and must be the last argument.
+// Syntax: foo(a1, a2, ...<restparamsName>)
+
+function fooRestParams(a, b, ...restParams) {
+    console.log("args provided by the callee 'a, b': ", a+', '+ b);
+    console.log("args not provided by the callee: ", restParams);
+}
+
+fooRestParams(1, 2, 3, 4, 5, 6);
+
+/**********  spread operator  **********/
+// useful whenever you want to send an entire array as an argument to a function where each element is assigned as one single argument at the called position
+
+function fooSprd(a, b, c, d) { console.log("a, b, c, d: ", a , ', ', b, ', ', c, ', ', d)}
+
+let arrSpread = [1,2,3,4];
+
+fooSpread(...arrSpread);
+
+// stmt: If the ... is used at the function definition they are collected as an array.
+// If the ... is used at the funcion call, the array is spread at the function's arg collection where the array is spread and each element is assigned to argu
+
+function fooSpread(a, ...args) {
+console.log(a);
+console.log(args);
+}
+
+fooSpread(...[11, 22, 33, 44]);
