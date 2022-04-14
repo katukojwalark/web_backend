@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<script src="06_staticMembers.js"></script>
+
+<body>
+    <h1>Static Members</h1>
+    <p>Static methods are used for the functionality that belongs to the class “as a whole”. It doesn’t relate to a concrete class instance.</p>
+    <p>Static properties are used when we’d like to store class-level data, also not bound to an instance.</p><br>
+   
+    <p>Static properties are used when we’d like to store class-level data, also not bound to an instance.</p>
+    <p>The syntax is:</p>
+    <div id="f43mvgp81m" data-trusted="1" class="code-example" data-prism-highlighted="1">
+        <div class="codebox code-example__codebox">
+          
+          <div class="codebox__code" data-code="1">
+            <pre class="line-numbers  language-javascript" tabindex="0"><span class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span><code class=" language-javascript"><span class="token keyword">class</span> <span class="token class-name">MyClass</span> <span class="token punctuation">{</span>
+    <span class="token keyword">static</span> property <span class="token operator">=</span> <span class="token operator">...</span><span class="token punctuation">;</span>
+  
+    <span class="token keyword">static</span> <span class="token function">method</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token operator">...</span>
+    <span class="token punctuation">}</span>
+    
+  <span class="token punctuation">}</span></code></pre>
+          </div>
+        </div>
+        
+        </div>
+        <p>Technically, static declaration is the same as assigning to the class itself:</p>
+        <div id="6gkv306egs" data-trusted="1" class="code-example" data-prism-highlighted="1">
+            <div class="codebox code-example__codebox">
+              
+              <div class="codebox__code" data-code="1">
+                <pre class="line-numbers  language-javascript" tabindex="0"><span class="line-numbers-rows"><span></span><span></span></span><code class=" language-javascript">MyClass<span class="token punctuation">.</span>property <span class="token operator">=</span> <span class="token operator">...</span>
+      MyClass<span class="token punctuation">.</span>method <span class="token operator">=</span> <span class="token operator">...</span></code></pre>
+              </div>
+            </div>
+            
+            </div>
+
+            <p>Static properties and methods are inherited.</p>
+            <p>For <code>class B extends A</code> the prototype of the class <code>B</code> itself points to <code>A</code>: <code>B.[[Prototype]] = A</code>. So if a field is not found in <code>B</code>, the search continues in <code>A</code>.</p>
+
+    <p>Technically, static declaration is the same as assigning to the class itself:</p>
+    <p>MyClass.property = ...<br>
+        MyClass.method = ...</p>
+
+
+    <h2>Java Script Code</h2>
+    
+    <iframe src="06_staticMembers.js" sandbox="allow-same-origin" 
+    onload="this.style.height=(this.contentWindow.document.body.scrollHeight)+'px'; width='100%'; this.style.backgroundColor  = 'lightgrey';"></iframe>
+
+
+</body>
+</html>
