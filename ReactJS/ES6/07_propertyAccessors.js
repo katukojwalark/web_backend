@@ -10,14 +10,16 @@ class Employee {
     set employeeId(id) {
         if(id>0) this.eId = id;
     }
+    /**
+     * @param {string} name
+     */
     set employeeName(name) {
         if(name.length != 0) this.eName = name;
     }
-    
+
     get employeeId() {
         return this.eId;
     }
-    
 }
 
 let emp1 = new Employee;
